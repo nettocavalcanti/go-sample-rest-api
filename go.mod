@@ -1,6 +1,6 @@
 module go-sample-rest-api
 
-go 1.23
+go 1.21.6
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
