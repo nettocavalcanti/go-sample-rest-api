@@ -31,6 +31,9 @@ jobs:
     
     - name: Install gotestfmt
       run: go install github.com/gotesttools/gotestfmt/v2/cmd/gotestfmt@latest
+    
+    - name: Install gocover-cobertura
+      run: go get github.com/boumenot/gocover-cobertura
 
     - name: Test with Go
     #  run: go test -json > TestResults-${{ matrix.go-version }}.json
