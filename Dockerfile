@@ -20,7 +20,7 @@ RUN GOOS=linux GOARCH=amd64 \
     go build \
     -trimpath \
     -ldflags="-w -s -X 'main.Version=${PROJECT_VERSION}'" \
-    -o app cmd/go-sample-rest-api/main.go
+    -o app ./main.go
 RUN go test -cover -v ./...
 
 # Stage 2 (to create a downsized "container executable", ~5MB)
