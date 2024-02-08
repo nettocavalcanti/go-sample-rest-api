@@ -19,6 +19,7 @@ func main() {
 		return c.Status(200).JSON(fiber.Map{
 			"status":  "up",
 			"message": "welcome",
+			"detail":  "Detailed message to display",
 		})
 	})
 
