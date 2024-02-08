@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   workflow_run:
-    workflows: ["go-unit-tests-and-coverage"]
+    workflows: ["go-unit-tests-and-coverage", "go-integration-tests"]
     branches: [main]
     types:
       - completed
