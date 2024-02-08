@@ -1,7 +1,7 @@
 # This workflow will build a golang project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
 
-name: Go Test and Upload results
+name: go-unit-tests-and-coverage
 
 on:
   push:
@@ -61,9 +61,9 @@ jobs:
         output: both
         thresholds: '60 80'
 
-    - name: Add Coverage PR Comment
-      uses: marocchino/sticky-pull-request-comment@v2
-      if: github.event_name == 'pull_request'
-      with:
-        recreate: true
-        path: code-coverage-results.md
+    #- name: Add Coverage PR Comment
+    #  uses: marocchino/sticky-pull-request-comment@v2
+    #  if: github.event_name == 'pull_request'
+    #  with:
+    #    recreate: true
+    #    path: code-coverage-results.md
