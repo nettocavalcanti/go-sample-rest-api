@@ -4,6 +4,11 @@
 name: go-integration-tests
 
 on:
+  workflow_run:
+    workflows: ["go-unit-tests-and-coverage"]
+    branches: [main]
+    types:
+      - completed
   push:
     branches: [ "main" ]
 
